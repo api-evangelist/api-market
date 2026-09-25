@@ -1,23 +1,129 @@
 aid: api-market
+
 name: API.market
-description: 'API.market is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://api.market/images/seo-cover.png
+
+description: API.market is a marketplace platform that aggregates and sells access to a wide variety of APIs and AI models. It offers developers
+  a single MCP (Multi-Channel Platform) connection to discover, subscribe, and integrate over 590 APIs across categories like image editing, video
+  generation, mapping, and data intelligence. The platform provides tools for subscription management, usage analytics, and payment handling,
+  aiming to simplify API consumption for both sellers and buyers. API.market also features a seller console for API providers to list their products,
+  set pricing plans, and manage deployments, fostering a vibrant ecosystem of API services.
+
 url: https://raw.githubusercontent.com/api-evangelist/api-market/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Marketplace
+- API
+- AI
+- Integration
+- MCP
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Overlay
+  url: overlays/api-market-overlay.yaml
+- type: Spectral
+  url: rules/api-market-rules.yml
+- type: JSONLD
+  url: json-ld/api-market-context.jsonld
+- type: Vocabulary
+  url: vocabulary/api-market-vocabulary.yml
+- type: DataModel
+  url: data-model/api-market-data-model.yml
+- type: ErrorCatalog
+  url: errors/api-market-problem-types.yml
+- type: Conformance
+  url: conformance/api-market-conformance.yml
+- type: LLMsTxt
+  url: llms/api-market-llms.txt
+- type: WellKnown
+  url: well-known/api-market-well-known.yml
+- type: Hosts
+  url: hosts/api-market-hosts.yml
+- type: Vendors
+  url: vendors/api-market-vendors.yml
+- type: TermsOfService
+  url: https://api.market/terms_of_service
+- type: Security
+  url: https://api.market/category/security
+- type: PrivacyPolicy
+  url: https://api.market/privacy_policy
+- type: GitHubOrganization
+  url: https://github.com/Noveum
+- type: DomainSecurity
+  url: security/api-market-domain-security.yml
 - type: Website
   url: https://api.market/
+- type: Documentation
+  url: https://docs.api.market/
+- type: APIReference
+  url: https://docs.api.market/api.market-usage-api-documentation
+- type: GettingStarted
+  url: https://docs.api.market/getting-started
+- type: Blog
+  url: https://api.market/blog
+- type: Support
+  url: https://api.market/contact
+- type: SignUp
+  url: https://api.market/auth/login
+
+apis:
+- aid: api-market:api-market-api
+  name: API.market API
+  description: 'API.market API as documented publicly: 77 operations. Contract generated from the documentation by API Evangelist (2026-09-25);
+    not the provider''s own document.'
+  humanURL: https://docs.api.market/api.market-mcp-server-guide
+  baseURL: https://prod.api.market
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/api-market-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 27
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

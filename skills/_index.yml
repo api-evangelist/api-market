@@ -1,0 +1,17 @@
+generated: '2026-09-25'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/_ae-authored/api-market-openapi-generated.yml
+skills:
+- file: skills/api-market-check-domain-availability.md
+  name: api-market-check-domain-availability
+  api: openapi/_ae-authored/api-market-openapi-generated.yml
+  operations:
+  - get_api_v1_magicapi_domainchecker_check_domains
+  - post_api_v1_magicapi_domainchecker_check_domains
+- file: skills/api-market-images-generate-and-fetch.md
+  name: api-market-images-generate-and-fetch
+  api: openapi/_ae-authored/api-market-openapi-generated.yml
+  operations:
+  - post_images_generate
+  - get_images_result

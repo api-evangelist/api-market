@@ -1,0 +1,421 @@
+generated: '2026-09-25'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/api-market-openapi-generated.yml
+vocabulary:
+  name: API.market Domain Vocabulary
+  description: 'Terms declared by API.market''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-25'
+  terms:
+  - term: GetResponse
+    definition: 'Object declared by the contract with fields: OrganizationName, Raw, RespondedServers, AddressRange.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetResponse
+  - term: PostApiMcpMagicapiMagicapiidRequest
+    definition: 'Object declared by the contract with fields: jsonrpc, id, method, params.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiMcpMagicapiMagicapiidRequest
+  - term: PostApiMcpMagicapiMagicapiidResponse
+    definition: 'Object declared by the contract with fields: resolution, quality, iterations.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiMcpMagicapiMagicapiidResponse
+  - term: PostApiV1BridgemlMetaLlama38BBridgemlMetaLlama38BRequest
+    definition: 'Object declared by the contract with fields: messages, temperature, max_tokens, top_p, frequency_penalty, stream.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1BridgemlMetaLlama38BBridgemlMetaLlama38BRequest
+  - term: PostApiV1MagicapiAiqrcodePredictionsRequest
+    definition: 'Object declared by the contract with fields: input.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiAiqrcodePredictionsRequest
+  - term: GetApiV1MagicapiCaptionerCaptionerResponse
+    definition: 'Object declared by the contract with fields: image, task.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiCaptionerCaptionerResponse
+  - term: PostApiV1MagicapiCaptionerCaptionerRequest
+    definition: 'Object declared by the contract with fields: image, task.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCaptionerCaptionerRequest
+  - term: PostApiV1MagicapiCaptionerCaptionerResponse
+    definition: 'Object declared by the contract with fields: image, task.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCaptionerCaptionerResponse
+  - term: GetApiV1MagicapiCoderCoderResponse
+    definition: 'Object declared by the contract with fields: top_k, top_p, prompt, max_tokens, temperature, system_prompt, repeat_penalty, presence_penalty,
+      frequency_penalty.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiCoderCoderResponse
+  - term: PostApiV1MagicapiCoderCoderRequest
+    definition: 'Object declared by the contract with fields: top_k, top_p, prompt, max_tokens, temperature, system_prompt, repeat_penalty, presence_penalty,
+      frequency_penalty.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCoderCoderRequest
+  - term: PostApiV1MagicapiCoderCoderResponse
+    definition: 'Object declared by the contract with fields: top_k, top_p, prompt, max_tokens, temperature, system_prompt, repeat_penalty, presence_penalty,
+      frequency_penalty.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCoderCoderResponse
+  - term: GetApiV1MagicapiColorizerColorizerResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiColorizerColorizerResponse
+  - term: PostApiV1MagicapiColorizerColorizerResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiColorizerColorizerResponse
+  - term: PostApiV1MagicapiCrunchbaseAutocompletesRequest
+    definition: 'Object declared by the contract with fields: query.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCrunchbaseAutocompletesRequest
+  - term: PostApiV1MagicapiCrunchbaseAutocompletesResponse
+    definition: 'Object declared by the contract with fields: entity_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCrunchbaseAutocompletesResponse
+  - term: GetApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsResponse
+    definition: 'Object declared by the contract with fields: entity_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsResponse
+  - term: PostApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsRequest
+    definition: 'Object declared by the contract with fields: entity_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsRequest
+  - term: PostApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsResponse
+    definition: 'Object declared by the contract with fields: entity_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiCrunchbaseCrunchbaseidOrganizationsResponse
+  - term: GetApiV1MagicapiDeblurerDeblurerResponse
+    definition: 'Object declared by the contract with fields: image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiDeblurerDeblurerResponse
+  - term: PostApiV1MagicapiDeblurerDeblurerRequest
+    definition: 'Object declared by the contract with fields: image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDeblurerDeblurerRequest
+  - term: PostApiV1MagicapiDeblurerDeblurerResponse
+    definition: 'Object declared by the contract with fields: image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDeblurerDeblurerResponse
+  - term: GetApiV1MagicapiDnscheckerDnscheckerResponse
+    definition: 'Object declared by the contract with fields: domain.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiDnscheckerDnscheckerResponse
+  - term: PostApiV1MagicapiDnscheckerDnscheckerRequest
+    definition: 'Object declared by the contract with fields: domain.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDnscheckerDnscheckerRequest
+  - term: PostApiV1MagicapiDomaincheckerCheckDomainsRequest
+    definition: 'Object declared by the contract with fields: domain_name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDomaincheckerCheckDomainsRequest
+  - term: PostApiV1MagicapiDomaincheckerCheckDomainsRequest2
+    definition: 'Object declared by the contract with fields: domain_name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDomaincheckerCheckDomainsRequest2
+  - term: PostApiV1MagicapiDomaincheckerCheckDomainsResponse
+    definition: 'Object declared by the contract with fields: available, taken.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiDomaincheckerCheckDomainsResponse
+  - term: PostApiV1MagicapiFaceswapRequest
+    definition: 'Object declared by the contract with fields: swap_image, target_image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiFaceswapRequest
+  - term: PostApiV1MagicapiFaceswapResponse
+    definition: 'Object declared by the contract with fields: output.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiFaceswapResponse
+  - term: PostApiV1MagicapiFaceswapRequest2
+    definition: 'Object declared by the contract with fields: input, input.swap_image, input.target_image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiFaceswapRequest2
+  - term: PostApiV1MagicapiFaceswapResponse2
+    definition: 'Object declared by the contract with fields: output.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiFaceswapResponse2
+  - term: GetApiV1MagicapiFaceswapFaceswapResponse
+    definition: 'Object declared by the contract with fields: swap_image, target_image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiFaceswapFaceswapResponse
+  - term: PostApiV1MagicapiFaceswapFaceswapRequest
+    definition: 'Object declared by the contract with fields: swap_image, target_image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiFaceswapFaceswapRequest
+  - term: PostApiV1MagicapiGpt5ChatCompletionsRequest
+    definition: 'Object declared by the contract with fields: model, messages.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiGpt5ChatCompletionsRequest
+  - term: PostApiV1MagicapiGpt5ChatCompletionsResponse
+    definition: 'Object declared by the contract with fields: role, content.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiGpt5ChatCompletionsResponse
+  - term: GetApiV1MagicapiHairHairResponse
+    definition: 'Object declared by the contract with fields: image, editing_type, color_description, hairstyle_description.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiHairHairResponse
+  - term: PostApiV1MagicapiHairHairRequest
+    definition: 'Object declared by the contract with fields: image, editing_type, color_description, hairstyle_description.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiHairHairRequest
+  - term: PostApiV1MagicapiHairHairResponse
+    definition: 'Object declared by the contract with fields: image, editing_type, color_description, hairstyle_description.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiHairHairResponse
+  - term: PostApiV1MagicapiImageUploadUploadRequest
+    definition: 'Object declared by the contract with fields: filename.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiImageUploadUploadRequest
+  - term: PostApiV1MagicapiImageUploadUploadResponse
+    definition: 'Object declared by the contract with fields: url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiImageUploadUploadResponse
+  - term: GetApiV1MagicapiNsfwNsfwResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiNsfwNsfwResponse
+  - term: PostApiV1MagicapiNsfwNsfwResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiNsfwNsfwResponse
+  - term: GetApiV1MagicapiObjectdetectorObjectdetectorResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiObjectdetectorObjectdetectorResponse
+  - term: PostApiV1MagicapiObjectdetectorObjectdetectorRequest
+    definition: 'Object declared by the contract with fields: image, text.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiObjectdetectorObjectdetectorRequest
+  - term: PostApiV1MagicapiObjectdetectorObjectdetectorResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiObjectdetectorObjectdetectorResponse
+  - term: GetApiV1MagicapiObjectremoverObjectremoverResponse
+    definition: 'Object declared by the contract with fields: mask, image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiObjectremoverObjectremoverResponse
+  - term: PostApiV1MagicapiObjectremoverObjectremoverRequest
+    definition: 'Object declared by the contract with fields: mask, image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiObjectremoverObjectremoverRequest
+  - term: PostApiV1MagicapiObjectremoverObjectremoverResponse
+    definition: 'Object declared by the contract with fields: mask, image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiObjectremoverObjectremoverResponse
+  - term: GetApiV1MagicapiOpenjourneyOpenjourneyResponse
+    definition: 'Object declared by the contract with fields: width, height, prompt, scheduler, num_outputs, guidance_scale, prompt_strength,
+      num_inference_steps.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiOpenjourneyOpenjourneyResponse
+  - term: PostApiV1MagicapiOpenjourneyOpenjourneyRequest
+    definition: 'Object declared by the contract with fields: width, height, prompt, scheduler, num_outputs, guidance_scale, prompt_strength,
+      num_inference_steps.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiOpenjourneyOpenjourneyRequest
+  - term: PostApiV1MagicapiOpenjourneyOpenjourneyResponse
+    definition: 'Object declared by the contract with fields: width, height, prompt, scheduler, num_outputs, guidance_scale, prompt_strength,
+      num_inference_steps.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiOpenjourneyOpenjourneyResponse
+  - term: PostApiV1MagicapiPdfExtractPdfToHtmlFileRequest
+    definition: 'Object declared by the contract with fields: pdf_file.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToHtmlFileRequest
+  - term: PostApiV1MagicapiPdfExtractPdfToHtmlFileResponse
+    definition: 'Object declared by the contract with fields: html.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToHtmlFileResponse
+  - term: PostApiV1MagicapiPdfExtractPdfToHtmlUrlRequest
+    definition: 'Object declared by the contract with fields: pdf_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToHtmlUrlRequest
+  - term: PostApiV1MagicapiPdfExtractPdfToHtmlUrlResponse
+    definition: 'Object declared by the contract with fields: html.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToHtmlUrlResponse
+  - term: PostApiV1MagicapiPdfExtractPdfToTextFileRequest
+    definition: 'Object declared by the contract with fields: pdf_file.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToTextFileRequest
+  - term: PostApiV1MagicapiPdfExtractPdfToTextFileResponse
+    definition: 'Object declared by the contract with fields: text.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToTextFileResponse
+  - term: PostApiV1MagicapiPdfExtractPdfToTextUrlRequest
+    definition: 'Object declared by the contract with fields: pdf_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToTextUrlRequest
+  - term: PostApiV1MagicapiPdfExtractPdfToTextUrlResponse
+    definition: 'Object declared by the contract with fields: text.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfToTextUrlResponse
+  - term: PostApiV1MagicapiPdfExtractPdfextractidRequest
+    definition: 'Object declared by the contract with fields: pdf_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfextractidRequest
+  - term: PostApiV1MagicapiPdfExtractPdfextractidResponse
+    definition: 'Object declared by the contract with fields: html.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPdfExtractPdfextractidResponse
+  - term: GetApiV1MagicapiPeriodPeriodResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiPeriodPeriodResponse
+  - term: PostApiV1MagicapiPeriodPeriodResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiPeriodPeriodResponse
+  - term: GetApiV1MagicapiRestorationRestorationResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiRestorationRestorationResponse
+  - term: PostApiV1MagicapiRestorationRestorationResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiRestorationRestorationResponse
+  - term: PostApiV1MagicapiUpscalerUpscale2XResponse
+    definition: 'Object declared by the contract with fields: id, subscriptionStatus, currentPeriodStartDate, endDate, renewDate, apiCallsMade,
+      cancellationDate, pricingPlan, product, workspace.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiUpscalerUpscale2XResponse
+  - term: PostApiV1MagicapiUpscalerUpscale2XRequest
+    definition: 'Object declared by the contract with fields: url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiUpscalerUpscale2XRequest
+  - term: GetApiV1MagicapiWhisperWhisperResponse
+    definition: 'Object declared by the contract with fields: audio, model, translate, temperature, transcription, suppress_tokens, logprob_threshold,
+      no_speech_threshold, condition_on_previous_text, compression_ratio_threshold, temperature_increment_on_fallback.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiWhisperWhisperResponse
+  - term: PostApiV1MagicapiWhisperWhisperRequest
+    definition: 'Object declared by the contract with fields: audio, model, translate, temperature, transcription, suppress_tokens, logprob_threshold,
+      no_speech_threshold, condition_on_previous_text, compression_ratio_threshold, temperature_increment_on_fallback.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiWhisperWhisperRequest
+  - term: PostApiV1MagicapiWhisperWhisperResponse
+    definition: 'Object declared by the contract with fields: audio, model, translate, temperature, transcription, suppress_tokens, logprob_threshold,
+      no_speech_threshold, condition_on_previous_text, compression_ratio_threshold, temperature_increment_on_fallback.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1MagicapiWhisperWhisperResponse
+  - term: GetApiV1MagicapiMagicapiidPredictionsRequestidResponse
+    definition: 'Object declared by the contract with fields: headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1MagicapiMagicapiidPredictionsRequestidResponse
+  - term: GetApiV1PipfeedParseExtractResponse
+    definition: 'Object declared by the contract with fields: url, title, author, html, text, length, description, siteName, topImage, date, keywords,
+      summary. (1 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1PipfeedParseExtractResponse
+  - term: PostApiV1PipfeedParseExtractRequest
+    definition: 'Object declared by the contract with fields: url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1PipfeedParseExtractRequest
+  - term: DeleteApiV1SubscriptionWorkspaceslugProductslugResponse
+    definition: 'Object declared by the contract with fields: subscription, message, cancelledImmediately.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/DeleteApiV1SubscriptionWorkspaceslugProductslugResponse
+  - term: PostApiV1SubscriptionWorkspaceslugProductslugPricingplanidRe
+    definition: 'Object declared by the contract with fields: additionalData, isDryRun.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1SubscriptionWorkspaceslugProductslugPricingplanidRe
+  - term: PostApiV1SubscriptionWorkspaceslugProductslugPricingplanidRe2
+    definition: 'Object declared by the contract with fields: subscription, action, previousSubscription.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1SubscriptionWorkspaceslugProductslugPricingplanidRe2
+  - term: GetApiV1ToonmeApiToonifyToonmeV1Response
+    definition: 'Object declared by the contract with fields: id, image_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1ToonmeApiToonifyToonmeV1Response
+  - term: PostApiV1ToonmeApiToonifyToonmeV1Response
+    definition: 'Object declared by the contract with fields: id, image_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1ToonmeApiToonifyToonmeV1Response
+  - term: PostApiV1ToonmeApiToonifyToonmeV1Request
+    definition: 'Object declared by the contract with fields: id, image_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1ToonmeApiToonifyToonmeV1Request
+  - term: PostApiV1ToonmeApiToonifyToonmeV1Response2
+    definition: 'Object declared by the contract with fields: image_process_response.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/PostApiV1ToonmeApiToonifyToonmeV1Response2
+  - term: GetApiV1ToonmeApiToonifyToonmeV1ResultResponse
+    definition: 'Object declared by the contract with fields: request_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api-market-openapi-generated.yml#/components/schemas/GetApiV1ToonmeApiToonifyToonmeV1ResultResponse

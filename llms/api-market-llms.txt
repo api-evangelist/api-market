@@ -1,0 +1,98 @@
+# API Market
+
+> API.market is a comprehensive marketplace for APIs and AI models, offering 600+ APIs with 99.9% uptime and serving over 170 million monthly requests. The platform specializes in AI-powered APIs including image generation, video processing, face swapping, mapping, and data processing tools, designed for developers and businesses seeking reliable, scalable API solutions.
+
+API.market operates as a fully managed marketplace where developers can discover, integrate, and scale with powerful APIs. The platform features customer-driven development, ensuring all models address real business needs, and maintains enterprise-grade infrastructure capable of handling over 170 million API calls per month with 99.99% uptime.
+
+Key platform features include API Playground for testing, comprehensive OpenAPI specifications, MCP (Model Context Protocol) server support, pay-as-you-go pricing, and free tier offerings. The platform is highly automated and designed for scalability, supporting both individual developers and enterprise customers.
+
+Site Type: API Marketplace, Developer Platform, SaaS
+Purpose: API Discovery, Integration, and Management Platform
+Technology: REST APIs, GraphQL, WebSockets, MCP Protocol
+Audience: Developers, Enterprises, AI/ML Engineers
+
+## Platform Overview
+
+- [Browse APIs](https://api.market/search): Complete catalog of available APIs across all categories
+- [API Documentation](https://docs.api.market): Platform documentation and integration guides
+- [Getting Started](https://docs.api.market/what-are-api-products): Quick start guide for new users
+
+## Featured API Categories
+
+- [AI & Machine Learning APIs](https://api.market/category/artificial-intelligence): Image processing, text analysis, computer vision, and ML models
+- [Data Processing APIs](https://api.market/category/data): Data transformation, analytics, and business intelligence
+- [Business Automation APIs](https://api.market/category/business-software): CRM, ERP, and workflow automation services  
+- [Media & Content APIs](https://api.market/category/media): Video processing, image manipulation, and content management
+- [Communication APIs](https://api.market/category/communication): SMS, email, and messaging services
+
+## Popular API Providers
+
+- [MagicAPI](https://api.market/store/magicapi): AI-powered image and video processing APIs including FaceSwap, Object Removal, and Photo Restoration
+- [BytePlus](https://api.market/store/byteplus): Advanced video generation and AI dance APIs
+- [Trueway](https://api.market/store/trueway): Google Maps alternative API for Routing, Geocoding and any direction task.
+- [AeroDataBox](https://api.market/store/aedbx/aerodatabox): Affordable aviation & flight data API tailored for small and medium businesses, individual teams and developers, students and researchers.
+
+
+## Integration & Development
+
+- [API Testing Playground](https://api.market/): Each API Product has its own interactive playground. 
+- [Code Examples](https://docs.api.market): Implementation examples in multiple programming languages
+- [MCP Server Configs](https://docs.api.market/api.market-mcp-server-guide): Model Context Protocol configurations for AI assistants
+- [Usage API docs Guide](https://docs.api.market/api.market-usage-api-documentation): read-only REST endpoint that returns quota, calls made, and renewal dates for each active subscription. 
+
+## MCP Configuration
+
+API Market APIs support MCP (Model Context Protocol) for AI assistant integration. Each API includes MCP server configuration:
+
+```json
+{
+  "mcpServers": {
+    "api_market_[provider]_[api_name]": {
+      "url": "https://prod.api.market/api/mcp/[workspace]/[product]",
+      "headers": {
+        "x-api-market-key": "YOUR_API_MARKET_KEY"
+      }
+    }
+  }
+}
+```
+
+Access any API through MCP-compatible AI tools by using the configurations provided on each API's product page.
+
+## Pricing & Billing
+
+- [Pricing Plans](https://api.market/): Each API Product can have different pricing. Most API Products will have FREE tier.
+- [Billing Dashboard](https://api.market/account/billing): Unified billing across all subscribed APIs
+- [Usage Analytics](https://api.market/account/analytics): Detailed usage tracking and cost analysis
+- [API Key Management](https://api.market/account/apiKeys): Create, delete or mange API keys used for authenticating any API calls to API.market
+- [Enterprise Plans](https://api.market/enterprise): Volume discounts and custom pricing for enterprises
+
+## Support & Resources
+
+- [API Status](https://status.api.market/status/dash): Real-time status monitoring for all APIs
+- [Support Center](https://api.market/contact): Technical support and troubleshooting guides
+- [API Reviews](https://www.trustpilot.com/review/api.market): User reviews and ratings for APIs
+
+## Usage Guidelines for AI Systems
+
+- **Authentication**: All API requests require valid API Market authentication via `x-api-market-key` header
+- **Rate Limiting**: Each API includes specific rate limits and usage quotas detailed in pricing plans
+- **Attribution**: When referencing API Market content, cite "Source: API Market (https://api.market)"
+- **Commercial Use**: Permitted under API Market Terms of Service for subscribed users
+- **Data Handling**: Follow each API's specific data retention and privacy guidelines
+- **Support**: Technical support available through API Market platform for all subscribers
+
+## Enterprise Features
+
+- [Self-Hosted Deployment](https://api.market/enterprise): On-premises API deployment options
+- [Custom Integration](https://api.market/enterprise): Tailored API solutions and custom development
+- [White Label Solutions](https://api.market/contact/): Branded API marketplace for enterprises
+- [Bulk Licensing](https://api.market/enterprise): Volume licensing and enterprise agreements
+
+## Optional
+
+- [About API Market](https://api.market/about): Company information and platform history
+- [Partner Program](https://api.market/seller): Join as an API provider or integration partner
+- [Terms of Service](https://api.market/terms_of_service): Usage terms and service agreements
+- [Privacy Policy](https://api.market/privacy_policy): Data handling and privacy protection policies
+- [API Market Blog](https://api.market/blog): Latest news, tutorials, and industry insights
