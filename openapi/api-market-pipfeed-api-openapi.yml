@@ -1,0 +1,264 @@
+openapi: 3.2.0
+info:
+  title: API.market Pipfeed API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 77 operation(s) read from 38 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; API.market has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 75
+    documentation: 2
+    pages-with-code: 38
+    pages-read: 38
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.api.market/api.market-mcp-server-guide
+  - https://docs.api.market/subscription-management-api-documentation
+  - https://docs.api.market/api.market-usage-api-documentation
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt
+  - https://docs.api.market/api.market-mcp-server-guide.md
+  - https://docs.api.market/subscription-management-api-documentation.md
+  - https://docs.api.market/api.market-usage-api-documentation.md
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products.md
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval.md
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt.md
+  - https://docs.api.market/api-product-docs/magicapi/screenshot-api
+  - https://docs.api.market/api-product-docs/magicapi/domain-availability-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/whois-api
+  - https://docs.api.market/api-product-docs/magicapi/pdf-conversion-api
+  - https://docs.api.market/api-product-docs/magicapi/image-upscale-api
+  - https://docs.api.market/api-product-docs/magicapi/dns-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/ageify-api
+  - https://docs.api.market/api-product-docs/magicapi/image-restoration-api
+  - https://docs.api.market/api-product-docs/magicapi/toon-me-api
+  - https://docs.api.market/api-product-docs/magicapi/coding-assistant
+  - https://docs.api.market/api-product-docs/magicapi/faceswap-api-instantaneous-replaces-face-with-one-another
+  - https://docs.api.market/api-product-docs/magicapi/image-upload-api
+  - https://docs.api.market/api-product-docs/magicapi/deblurer-api
+  - https://docs.api.market/api-product-docs/magicapi/hair-changer-api
+  - https://docs.api.market/api-product-docs/magicapi/ai-qr-code-generator-api
+  - https://docs.api.market/api-product-docs/magicapi/whisper-api
+  - https://docs.api.market/api-product-docs/magicapi/image-colorizer-api
+  - https://docs.api.market/api-product-docs/magicapi/openjourney-api
+  - https://docs.api.market/api-product-docs/magicapi/object-remover-api
+  - https://docs.api.market/api-product-docs/magicapi/image-captioner-api
+  - https://docs.api.market/api-product-docs/magicapi/object-detector-api
+  - https://docs.api.market/api-product-docs/magicapi/nsfw-api
+  - https://docs.api.market/api-product-docs/magicapi/crunchbase-api
+  - https://docs.api.market/api-product-docs/magicapi/pipfeeds-extract-api-developer-documentation
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-8b-instruct
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-70b-instruct
+servers:
+- url: https://prod.api.market
+security:
+- apiKey: []
+tags:
+- name: Pipfeed
+paths:
+  /api/v1/pipfeed/parse/extract:
+    get:
+      operationId: get_api_v1_pipfeed_parse_extract
+      tags:
+      - Pipfeed
+      summary: GET /api/v1/pipfeed/parse/extract
+      x-source: https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1PipfeedParseExtractResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X ' POST '  ' https://prod.api.market/api/v1/pipfeed/parse/extract '  -H ' accept: application/json '  -H ' x-api-market-key: API_KEY '  -H ' Content-Type: application/json '  -d ' { \n \"url\": \"https://techcrunch.com/2022/04/18/web-scraping-legal-court/\" \n } ' \n Response: \n { \n \"url\" : \" https://techcrunch.com/2022/04/18/web-scraping-legal-court/ \" , \n \"title\" : \" Web scraping is legal, US ap"
+    post:
+      operationId: post_api_v1_pipfeed_parse_extract
+      tags:
+      - Pipfeed
+      summary: POST /api/v1/pipfeed/parse/extract
+      x-source: https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1PipfeedParseExtractRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://prod.api.market/api/v1/pipfeed/parse/extract'  --header 'accept: application/json'  --header 'x-api-market-key: YOUR_API_KEY'  --header 'Content-Type: application/json'  --data '{ \n \"url\": \"https://techcrunch.com/2022/04/18/web-scraping-legal-court/\" \n }' Copy { \n \"x-request-id\": \"f8e1d576-a460-4847-8683-c31b88c4a958\", \n \"host\": \"localhost:4000\", \n \"connection\": \"keep-aliv"
+  /api/v2/pipfeed/overrideCustomUsage:
+    post:
+      operationId: post_api_v2_pipfeed_overrideCustomUsage
+      tags:
+      - Pipfeed
+      summary: POST /api/v2/pipfeed/overrideCustomUsage
+      x-source: https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2PipfeedOverridecustomusageRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://prod.api.market/api/v2/pipfeed/overrideCustomUsage'  --header 'accept: application/json'  --header 'x-api-market-key: ADMIN_API_KEY'  --header 'Content-Type: application/json'  --data '{\n    \"data\": {\n        \"overrideRequestId\": \"f8e1d576-a460-4847-8683-c31b88c4a958\",\n        \"overrideCustomUsage\": \"API=812;\"\n    }\n}'\n```"
+  /pipfeed/parse/extract:
+    post:
+      operationId: post_pipfeed_parse_extract
+      tags:
+      - Pipfeed
+      summary: Using the request and response below, create a detailed OpenAPI specification
+      x-source: https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPipfeedParseExtractRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPipfeedParseExtractResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostPipfeedParseExtractRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The URL of the news article to extract and summarize.
+      required:
+      - url
+    PostPipfeedParseExtractResponse:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The URL of the news article.
+        title:
+          type: string
+          description: The title of the news article.
+        author:
+          type: string
+          description: The author of the news article.
+        html:
+          type: string
+          description: The HTML content of the news article.
+        text:
+          type: string
+          description: The plain text content of the news article.
+        length:
+          type: integer
+          description: The length of the news article.
+        description:
+          type: string
+          description: A brief description of the news article.
+        siteName:
+          type: string
+          description: The name of the news site.
+        topImage:
+          type: string
+          description: The URL of the top image associated with the news article.
+        date:
+          type: string
+          description: The publication date of the news article.
+        keywords:
+          type: string
+          description: Keywords associated with the news article.
+        summary:
+          type: array
+          description: Summarized content of the news article.
+        sentiment:
+          type: object
+          description: Sentiment analysis result.
+    PostApiV1PipfeedParseExtractRequest:
+      type: object
+      properties:
+        url:
+          type: string
+    GetApiV1PipfeedParseExtractResponse:
+      type: object
+      properties:
+        url:
+          type: string
+        title:
+          type: string
+        author:
+          type: string
+        html:
+          type: string
+        text:
+          type: string
+        length:
+          type: integer
+        description:
+          type: string
+        siteName:
+          type: string
+        topImage:
+          type: string
+        date:
+          type: string
+        keywords:
+          type: string
+        summary:
+          type: array
+          items:
+            type: string
+        sentiment:
+          type: object
+          properties:
+            score:
+              type: integer
+            comparative:
+              type: number
+            calculation:
+              type: array
+              items:
+                type: object
+                properties:
+                  prohibit:
+                    type: integer
+            postive:
+              type: array
+              items:
+                type: string
+            negative:
+              type: array
+              items:
+                type: string
+    PostApiV2PipfeedOverridecustomusageRequest:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            overrideRequestId:
+              type: string
+            overrideCustomUsage:
+              type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-market-key

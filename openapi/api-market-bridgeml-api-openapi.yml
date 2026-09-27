@@ -1,0 +1,125 @@
+openapi: 3.2.0
+info:
+  title: API.market Bridgeml API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 77 operation(s) read from 38 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; API.market has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 75
+    documentation: 2
+    pages-with-code: 38
+    pages-read: 38
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.api.market/api.market-mcp-server-guide
+  - https://docs.api.market/subscription-management-api-documentation
+  - https://docs.api.market/api.market-usage-api-documentation
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt
+  - https://docs.api.market/api.market-mcp-server-guide.md
+  - https://docs.api.market/subscription-management-api-documentation.md
+  - https://docs.api.market/api.market-usage-api-documentation.md
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products.md
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval.md
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt.md
+  - https://docs.api.market/api-product-docs/magicapi/screenshot-api
+  - https://docs.api.market/api-product-docs/magicapi/domain-availability-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/whois-api
+  - https://docs.api.market/api-product-docs/magicapi/pdf-conversion-api
+  - https://docs.api.market/api-product-docs/magicapi/image-upscale-api
+  - https://docs.api.market/api-product-docs/magicapi/dns-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/ageify-api
+  - https://docs.api.market/api-product-docs/magicapi/image-restoration-api
+  - https://docs.api.market/api-product-docs/magicapi/toon-me-api
+  - https://docs.api.market/api-product-docs/magicapi/coding-assistant
+  - https://docs.api.market/api-product-docs/magicapi/faceswap-api-instantaneous-replaces-face-with-one-another
+  - https://docs.api.market/api-product-docs/magicapi/image-upload-api
+  - https://docs.api.market/api-product-docs/magicapi/deblurer-api
+  - https://docs.api.market/api-product-docs/magicapi/hair-changer-api
+  - https://docs.api.market/api-product-docs/magicapi/ai-qr-code-generator-api
+  - https://docs.api.market/api-product-docs/magicapi/whisper-api
+  - https://docs.api.market/api-product-docs/magicapi/image-colorizer-api
+  - https://docs.api.market/api-product-docs/magicapi/openjourney-api
+  - https://docs.api.market/api-product-docs/magicapi/object-remover-api
+  - https://docs.api.market/api-product-docs/magicapi/image-captioner-api
+  - https://docs.api.market/api-product-docs/magicapi/object-detector-api
+  - https://docs.api.market/api-product-docs/magicapi/nsfw-api
+  - https://docs.api.market/api-product-docs/magicapi/crunchbase-api
+  - https://docs.api.market/api-product-docs/magicapi/pipfeeds-extract-api-developer-documentation
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-8b-instruct
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-70b-instruct
+servers:
+- url: https://prod.api.market
+security:
+- apiKey: []
+tags:
+- name: Bridgeml
+paths:
+  /api/v1/bridgeml/meta-llama3-70b/bridgeml/meta-llama3-70b:
+    post:
+      operationId: post_api_v1_bridgeml_meta_llama3_70b_bridgeml_meta_llama3_70b
+      tags:
+      - Bridgeml
+      summary: POST /api/v1/bridgeml/meta-llama3-70b/bridgeml/meta-llama3-70b
+      x-source: https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-70b-instruct
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X 'POST'  'https://prod.api.market/api/v1/bridgeml/meta-llama3-70b/bridgeml/meta-llama3-70b'  -H 'accept: application/json'  -H 'x-api-market-key: API_KEY'  -H 'Content-Type: application/json'  -d '{ \n \"messages\": [ \n { \n \"role\": \"user\", \n \"content\": \"hello\" \n }, \n { \n \"role\": \"assistant\", \n \"content\": \"As a senior software engineer create a AWS python lambda that calls an API with the given"
+  /api/v1/bridgeml/meta-llama3-8b/bridgeml/meta-llama3-8b:
+    post:
+      operationId: post_api_v1_bridgeml_meta_llama3_8b_bridgeml_meta_llama3_8b
+      tags:
+      - Bridgeml
+      summary: POST /api/v1/bridgeml/meta-llama3-8b/bridgeml/meta-llama3-8b
+      x-source: https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-8b-instruct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1BridgemlMetaLlama38BBridgemlMetaLlama38BRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X 'POST'  'https://prod.api.market/api/v1/bridgeml/meta-llama3-8b/bridgeml/meta-llama3-8b'  -H 'accept: application/json'  -H 'x-api-market-key: API_KEY'  -H 'Content-Type: application/json'  -d '{ \n \"messages\": [ \n { \n \"role\": \"user\", \n \"content\": \"hello\" \n }, \n { \n \"role\": \"assistant\", \n \"content\": \"As a senior copywriter, write a long-form blog on why they should integrate LLM APIs from a"
+components:
+  schemas:
+    PostApiV1BridgemlMetaLlama38BBridgemlMetaLlama38BRequest:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            type: object
+            properties:
+              role:
+                type: string
+              content:
+                type: string
+        temperature:
+          type: integer
+        max_tokens:
+          type: integer
+        top_p:
+          type: integer
+        frequency_penalty:
+          type: integer
+        stream:
+          type: boolean
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-market-key

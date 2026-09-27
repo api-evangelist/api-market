@@ -1,0 +1,139 @@
+openapi: 3.2.0
+info:
+  title: API.market MCP API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 77 operation(s) read from 38 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; API.market has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 75
+    documentation: 2
+    pages-with-code: 38
+    pages-read: 38
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.api.market/api.market-mcp-server-guide
+  - https://docs.api.market/subscription-management-api-documentation
+  - https://docs.api.market/api.market-usage-api-documentation
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt
+  - https://docs.api.market/api.market-mcp-server-guide.md
+  - https://docs.api.market/subscription-management-api-documentation.md
+  - https://docs.api.market/api.market-usage-api-documentation.md
+  - https://docs.api.market/seller-docs/testing-your-apis-and-products.md
+  - https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval.md
+  - https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt.md
+  - https://docs.api.market/api-product-docs/magicapi/screenshot-api
+  - https://docs.api.market/api-product-docs/magicapi/domain-availability-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/whois-api
+  - https://docs.api.market/api-product-docs/magicapi/pdf-conversion-api
+  - https://docs.api.market/api-product-docs/magicapi/image-upscale-api
+  - https://docs.api.market/api-product-docs/magicapi/dns-checker-api
+  - https://docs.api.market/api-product-docs/magicapi/ageify-api
+  - https://docs.api.market/api-product-docs/magicapi/image-restoration-api
+  - https://docs.api.market/api-product-docs/magicapi/toon-me-api
+  - https://docs.api.market/api-product-docs/magicapi/coding-assistant
+  - https://docs.api.market/api-product-docs/magicapi/faceswap-api-instantaneous-replaces-face-with-one-another
+  - https://docs.api.market/api-product-docs/magicapi/image-upload-api
+  - https://docs.api.market/api-product-docs/magicapi/deblurer-api
+  - https://docs.api.market/api-product-docs/magicapi/hair-changer-api
+  - https://docs.api.market/api-product-docs/magicapi/ai-qr-code-generator-api
+  - https://docs.api.market/api-product-docs/magicapi/whisper-api
+  - https://docs.api.market/api-product-docs/magicapi/image-colorizer-api
+  - https://docs.api.market/api-product-docs/magicapi/openjourney-api
+  - https://docs.api.market/api-product-docs/magicapi/object-remover-api
+  - https://docs.api.market/api-product-docs/magicapi/image-captioner-api
+  - https://docs.api.market/api-product-docs/magicapi/object-detector-api
+  - https://docs.api.market/api-product-docs/magicapi/nsfw-api
+  - https://docs.api.market/api-product-docs/magicapi/crunchbase-api
+  - https://docs.api.market/api-product-docs/magicapi/pipfeeds-extract-api-developer-documentation
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-8b-instruct
+  - https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-70b-instruct
+servers:
+- url: https://prod.api.market
+security:
+- apiKey: []
+tags:
+- name: MCP
+paths:
+  /api/mcp/magicapi/{magicapiid}:
+    get:
+      operationId: get_api_mcp_magicapi_magicapiid
+      tags:
+      - MCP
+      summary: GET /api/mcp/magicapi/domainchecker
+      description: MCP endpoint for the Domain Checker utility API.
+      x-source: https://docs.api.market/api.market-mcp-server-guide
+      parameters:
+      - name: magicapiid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at magicapiId
+    post:
+      operationId: post_api_mcp_magicapi_magicapiid
+      tags:
+      - MCP
+      summary: POST /api/mcp/magicapi/domainchecker
+      x-source: https://docs.api.market/api.market-mcp-server-guide
+      parameters:
+      - name: magicapiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiMcpMagicapiMagicapiidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiMcpMagicapiMagicapiidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST "https://prod.api.market/api/mcp/magicapi/domainchecker"  -H "Content-Type: application/json"  -H "x-api-market-key: YOUR_API_KEY"  -d ''{"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}}'' '
+        collapsed_from: 2 example path(s) differing only at magicapiId
+components:
+  schemas:
+    PostApiMcpMagicapiMagicapiidResponse:
+      type: object
+      properties:
+        resolution:
+          type: string
+        quality:
+          type: string
+        iterations:
+          type: integer
+    PostApiMcpMagicapiMagicapiidRequest:
+      type: object
+      properties:
+        jsonrpc:
+          type: string
+        id:
+          type: integer
+        method:
+          type: string
+        params:
+          type: object
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-market-key
