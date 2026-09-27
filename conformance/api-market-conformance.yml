@@ -1,19 +1,32 @@
 generated: '2026-09-25'
-method: derived
-generator: derive-conformance.py
-source: openapi/ (1 document(s), 45 mutating operations)
+method: probed
+source:
+- https://api.market/.well-known/oauth-authorization-server
+- https://api.market/.well-known/oauth-protected-resource/api/mcp/gateway
+- https://github.com/Noveum/api-market-agent-integrations/blob/main/server.json
 standards:
-- id: openapi-3.1
+- id: rfc8414
+  name: OAuth 2.0 Authorization Server Metadata
   conforms: true
-  evidence: the document declares 3.1.0
-- id: oauth2
-  conforms: false
-  evidence: 'securitySchemes: apiKey (apiKey)'
-- id: rfc9457
-  conforms: false
-  evidence: no response declares application/problem+json
-- id: idempotency
-  conforms: false
-  evidence: no idempotency key parameter on mutating operations
-note: 'Derived from the provider''s own OpenAPI only: what the contract declares. Claims the contract cannot carry (PCI DSS, SOC 2, FAPI, ISO
-  20022) come from the documentation reader and are merged below when found.'
+  evidence: https://api.market/.well-known/oauth-authorization-server (200 application/json)
+- id: rfc9728
+  name: OAuth 2.0 Protected Resource Metadata
+  conforms: true
+  evidence: https://api.market/.well-known/oauth-protected-resource/api/mcp/gateway (200); gateway 401 carries WWW-Authenticate
+    Bearer resource_metadata
+- id: rfc7636
+  name: PKCE
+  conforms: true
+  evidence: 'code_challenge_methods_supported: ["S256"] in the authorization server metadata'
+- id: rfc7591
+  name: OAuth 2.0 Dynamic Client Registration
+  conforms: true
+  evidence: registration_endpoint https://api.market/api/oauth/register in the authorization server metadata
+- id: rfc7009
+  name: OAuth 2.0 Token Revocation
+  conforms: true
+  evidence: revocation_endpoint https://api.market/api/oauth/revoke in the authorization server metadata
+- id: mcp
+  name: Model Context Protocol (Streamable HTTP)
+  conforms: true
+  evidence: server.json remotes type streamable-http at https://api.market/api/mcp/gateway, validated against https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json

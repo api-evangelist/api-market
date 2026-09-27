@@ -1,0 +1,54 @@
+generated: '2026-09-25'
+method: searched
+source:
+- https://docs.api.market/subscription-management-api-documentation
+- https://docs.api.market/api.market-usage-api-documentation
+- https://docs.api.market/how-can-i-cancel-my-subscription
+- https://docs.api.market/error-code
+authentication:
+  style: api-key header
+  header: x-api-market-key
+  oauth: MCP gateway only (see authentication/api-market-authentication.yml)
+idempotency:
+  coverage: none
+  mechanism: null
+  note: No idempotency key or replay protection is documented for the one mutating REST surface (create/upgrade/downgrade
+    and cancel subscription).
+dry_run:
+  supported: true
+  parameter: isDryRun
+  operations:
+  - POST /api/v1/subscription/{workspaceSlug}/{productSlug}/{pricingPlanId}
+  text: 'isDryRun (optional): Set to true to simulate the operation without making changes'
+  docs: https://docs.api.market/subscription-management-api-documentation
+reversibility:
+  grade: documented
+  write_surfaces:
+  - action: Create/Upgrade/Downgrade Subscription
+    operation: POST /api/v1/subscription/{workspaceSlug}/{productSlug}/{pricingPlanId}
+    reversal: DELETE /api/v1/subscription/{workspaceSlug}/{productSlug} (Cancel Subscription)
+    window: null
+    grade: documented
+    docs: https://docs.api.market/how-can-i-cancel-my-subscription
+    note: '"Subscription of any API Product can be cancelled anytime by the user." and "Cancelled API Product can
+      still be used until the end of the Subscription period." No refund of charges already made and no un-cancel
+      window is stated, so it is not graded verified.'
+  - action: call_api / per-product API execution
+    reversal: null
+    grade: none
+    note: Paid calls consume quota or wallet funds; no reversal is documented. The integration README advises inspecting
+      prices and asking the user before paid execution.
+versioning:
+  style: path
+  value: /api/v1
+error_envelope:
+  shape: '{"error": "Error message description"}'
+  docs: https://docs.api.market/subscription-management-api-documentation
+  see: errors/api-market-error-codes.yml
+rate_limit_signaling:
+  status: 429
+  headers:
+  - Retry-After
+  see: rate-limits/api-market-rate-limits.yml
+pagination:
+  documented: false

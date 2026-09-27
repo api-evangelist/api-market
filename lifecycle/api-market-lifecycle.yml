@@ -1,0 +1,11 @@
+generated: '2026-09-25'
+method: searched
+source:
+- https://api.market/llms.txt
+- https://docs.api.market/api.market-usage-api-documentation
+versioning: URL path version (/api/v1/...) on the Subscription Management and Usage APIs; the MCP gateway reports
+  server version 3.0.0 in its MCP registry server.json.
+deprecation: null
+status_page: https://status.api.market/status/dash
+note: No deprecation or sunset policy is published. The Usage API page carries a one-row changelog (2025-05-17 Initial
+  public release).

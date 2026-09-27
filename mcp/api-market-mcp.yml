@@ -1,10 +1,132 @@
-generated: 2026-09-25
-method: derived
-source: apis.yml
+generated: '2026-09-25'
+method: searched
+source:
+- https://github.com/Noveum/api-market-agent-integrations/blob/main/README.md
+- https://github.com/Noveum/api-market-agent-integrations/blob/main/server.json
+- https://docs.api.market/api.market-mcp-server-guide
+- https://api.market/.well-known/oauth-protected-resource/api/mcp/gateway
+- https://docs.api.market/.well-known/mcp/server-card.json
+name: API.market MCP Gateway
+status: live
+server:
+  name: io.github.Noveum/api-market-gateway
+  title: API.market MCP Gateway
+  version: 3.0.0
+  transport: streamable-http
+  url: https://api.market/api/mcp/gateway
+  websiteUrl: https://api.market/mcp
 deployment:
-  mode: none
-  endpoint: null
-  install: null
-  package: null
+  mode: both
+  endpoint: https://api.market/api/mcp/gateway
+  install: npx -y @noveum-ai/mcp-server --headers x-magicapi-key:your-api-key
+  package: https://www.npmjs.com/package/@noveum-ai/mcp-server
+  auth: oauth
+  verified: probed
+  note: POST tools/list to the gateway anonymously returned 401 with WWW-Authenticate Bearer resource_metadata,
+    and the RFC 9728 document at /.well-known/oauth-protected-resource/api/mcp/gateway returned 200 (scopes_supported
+    mcp:use). The provider documents API-key auth (x-api-market-key) as the alternative. The stdio package @noveum-ai/mcp-server
+    (Noveum/api-market-mcp-server, MIT, npm 1.0.4 of 2025-03-30) is the older per-API local server and predates
+    the hosted gateway.
+auth:
+  type: oauth2
+  flow: authorization_code
+  pkce: S256
+  dynamic_client_registration: https://api.market/api/oauth/register
+  scopes:
+  - mcp:use
+  - offline_access
+  alternative: x-api-market-key header
+tools:
+- name: search_apis
+  description: Find products by keyword or browse categories
+- name: get_api_tools
+  description: Retrieve operation schemas, documentation and pricing
+- name: call_api
+  description: Execute a selected API operation
+- name: check_usage
+  description: Check subscription usage, quotas and wallet balance
+- name: manage_subscription
+  description: Inspect plans and manage API subscriptions
+tools_note: Tool names and descriptions are verbatim from the provider README; live inputSchemas are OAuth-gated
+  (anonymous tools/list returned 401). The README reports the hosted server as version 3.0.0 with five tools, two
+  resources and two prompts.
+per_product_servers:
+  pattern: https://prod.api.market/api/mcp/{workspace}/{api-slug}
+  auth_header: x-api-market-key
+  docs: https://docs.api.market/api.market-mcp-server-guide
+  note: Every marketplace product is also served as its own MCP server with tools generated from its OpenAPI operations
+    (e.g. POST /images/generate -> post_images_generate). Those tools belong to the individual sellers and are not
+    enumerated here.
+docs_server:
+  name: API.Market MCP Server (documentation)
+  endpoint: https://docs.api.market/~gitbook/mcp
+  transport: streamable-http
   auth: none
-  verified: derived
+  platform: GitBook (com.gitbook.sites.mcp/site_Boiqz, version 0.27.2)
+  verified: probed
+  note: Anonymous tools/list returned 200 (text/event-stream) on 2026-09-25; tools are for searching and reading
+    the docs, not for calling marketplace APIs.
+  tools:
+  - name: searchDocumentation
+    description: Search across the documentation to find relevant information, code examples, API references, and
+      guides. Use this tool when you need to answer questions about API.Market, find specific documentation, understand
+      how features work, or locate implementation details. The search returns contextual content with titles and
+      direct links to the documentation pages.
+    inputSchema:
+      type: object
+      properties:
+        query:
+          type: string
+      required:
+      - query
+      additionalProperties: false
+      $schema: http://json-schema.org/draft-07/schema#
+  - name: getPage
+    description: Fetch the full markdown content of a specific documentation page from API.Market. Use this when
+      you have a page URL and want to read its content. Accepts full URLs (e.g. https://docs.api.market//getting-started).
+      Since `searchDocumentation` returns partial content, use `getPage` to retrieve the complete page when you
+      need more details. The content includes links you can follow to navigate to related pages.
+    inputSchema:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The URL of the page to fetch
+      required:
+      - url
+      additionalProperties: false
+      $schema: http://json-schema.org/draft-07/schema#
+  - name: sendFeedback
+    description: Report an issue in the documentation of API.Market so the team can fix it. Use it whenever, while
+      helping a user, you come across content that is outdated, contradictory, missing information, or otherwise
+      unhelpful. Also use it when the user themselves reports a problem with the docs, even if you could not verify
+      it yourself. If it's your own observation, do a quick sanity check that the issue is real before reporting
+      — no need to exhaustively re-read the page. Send one call per distinct issue and do not report the same issue
+      twice in a conversation. Do not use this tool to confirm that a page is accurate; it is for reporting problems
+      only.
+    inputSchema:
+      type: object
+      properties:
+        content:
+          type: string
+          minLength: 1
+          maxLength: 2048
+          description: Explain the issue in full, as if writing to a documentation maintainer who never saw this
+            conversation. Describe what is wrong, where on the page it appears (quote the exact sentence or section
+            title when possible), what the user was trying to do, and, when relevant, what the correct or expected
+            information should be. Write a few clear, specific sentences in English. Never include personal or confidential
+            information from the conversation. Up to 2048 characters.
+        pageUrl:
+          type: string
+          description: The full URL of the page the issue is about (e.g. https://docs.api.market//getting-started),
+            so the finding is linked to the exact page.
+        goal:
+          type: string
+          maxLength: 1024
+          description: The broader end goal you were ultimately trying to accomplish (as/on behalf of the user)
+            when you hit this issue. Gives the team the context you were working towards. Optional.
+      required:
+      - content
+      - pageUrl
+      additionalProperties: false
+      $schema: http://json-schema.org/draft-07/schema#

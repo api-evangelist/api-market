@@ -1,0 +1,12 @@
+generated: '2026-09-25'
+method: searched
+source: https://docs.api.market/api.market-usage-api-documentation
+scheme: dated
+entries:
+- version: v1
+  date: '2025-05-17'
+  breaking: false
+  highlights:
+  - 'Usage API: Initial public release'
+  api: API.market Usage API
+note: Only the Usage API page carries a changelog; there is no platform-wide changelog.

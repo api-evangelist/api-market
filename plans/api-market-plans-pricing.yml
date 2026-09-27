@@ -1,0 +1,21 @@
+generated: '2026-09-25'
+method: searched
+name: API.market seller pricing
+source: https://api.market/seller
+audience: business-product
+pricing_basis: ad-valorem
+published: true
+delivery:
+  delivery: managed
+plans:
+- name: Seller listing
+  description: Listing an API on the marketplace; API.market handles gateway, keys, billing, docs and payouts.
+  price_text: Free to list
+  price: 0
+  features:
+  - Managed gateway, keys, billing, docs and global payouts, with zero infrastructure to build or operate
+  limits: []
+  revenue_share_text: Keep 80% of revenue
+note: Buyer prices are set per product by each seller (FREE, Basic, Pro, Ultra, Mega and custom plans, monthly or
+  pay-as-you-go per https://docs.api.market/how-does-api.market-charges-me) and are not API.market platform prices.
+  Enterprise volume pricing is by contact at https://api.market/enterprise.

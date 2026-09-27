@@ -56,10 +56,13 @@ reliance:
     cannot tell those apart
 checked:
 - 'docs-platform: gitbook'
+- status.api.market (StatusPage)
 - api.market (Website)
 - docs.api.market (Documentation)
-- docs.api.market (APIReference)
 - docs.api.market (GettingStarted)
 - api.market (Support)
-- api.market (SignUp)
+- api.market (HelpCenter)
+- api.market (Login)
+- api.market (baseURL)
 - prod.api.market (baseURL)
+- api.market (mcp)

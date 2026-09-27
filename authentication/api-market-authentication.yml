@@ -1,0 +1,38 @@
+generated: '2026-09-25'
+method: searched
+source:
+- https://docs.api.market/subscription-management-api-documentation
+- https://docs.api.market/api.market-usage-api-documentation
+- https://api.market/.well-known/oauth-authorization-server
+- https://api.market/.well-known/oauth-protected-resource/api/mcp/gateway
+docs: https://docs.api.market/api.market-usage-api-documentation
+schemes:
+- name: apiMarketKey
+  type: apiKey
+  in: header
+  header: x-api-market-key
+  applies_to:
+  - Subscription Management API
+  - Usage API
+  - per-product APIs and MCP servers
+  - MCP gateway (alternative)
+  description: Pass your personal or workspace API key in the custom x-api-market-key request header.
+  key_management: https://api.market/account/apiKeys
+- name: mcpOAuth
+  type: oauth2
+  applies_to:
+  - MCP gateway
+  flow: authorization_code
+  pkce:
+  - S256
+  authorization_endpoint: https://api.market/api/oauth/authorize
+  token_endpoint: https://api.market/api/oauth/token
+  registration_endpoint: https://api.market/api/oauth/register
+  revocation_endpoint: https://api.market/api/oauth/revoke
+  token_endpoint_auth_methods:
+  - none
+  scopes:
+  - mcp:use
+  - offline_access
+  bearer_methods:
+  - header

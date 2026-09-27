@@ -1,0 +1,43 @@
+generated: '2026-09-25'
+method: searched
+source:
+- https://docs.api.market/error-code
+- https://docs.api.market/subscription-management-api-documentation
+- https://docs.api.market/api.market-usage-api-documentation
+format: json
+envelope:
+  field: message
+  note: 'The error-code page says to check the JSON response for a field called message; the Subscription Management
+    and Usage API pages show {"error": "..."} instead (e.g. {"error":"invalid_api_key"}).'
+problems:
+- status: 400
+  title: Bad Request
+  description: The request was unacceptable, often due to missing a required parameter.
+- status: 401
+  title: Unauthorized
+  description: No valid API key provided.
+  code: invalid_api_key
+- status: 403
+  title: Forbidden
+  description: Forbidden (insufficient permissions)
+- status: 404
+  title: Not Found
+  description: The requested resource doesn't exist.
+  code: subscription_not_found
+- status: 405
+  title: Method Not Allowed
+  description: Method Not Allowed
+- status: 409
+  title: Conflict
+  description: Conflict (subscription already exists, invalid state transition)
+- status: 429
+  title: Too many requests
+  description: API request limit exceeded. See section Rate Limiting for more info.
+  code: rate_limited
+  remediation: Rate-limit exceeded. Retry-After header set.
+- status: 500
+  title: Server Error
+  description: We have failed to process your request. (You can contact us anytime)
+  code: server_error
+billing_note: Only API calls that return "200 OK" status code are charged; Error responses (4xx, 5xx) are NOT charged
+  (https://docs.api.market/how-does-api.market-charges-me).

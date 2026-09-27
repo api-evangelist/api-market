@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API.market is a company surfaced via the API Evangelist harvest backlog (source: new-submission) and added to the network as a stub for full-pipeline profiling.
-- https://api.market/
+API.market (Noveum) is an API marketplace launched in April 2024 where developers discover, subscribe to and call third-party APIs and AI models with one account, one x-api-market-key and unified billing, and where sellers import an OpenAPI source, set pricing plans and get paid. The platform itself exposes a hosted MCP gateway at https://api.market/api/mcp/gateway (Streamable HTTP, OAuth 2.1 with dynamic client registration, or API key) with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), per-product MCP endpoints at https://prod.api.market/api/mcp/{workspace}/{api-slug}, a Subscription Management REST API and a read-only Usage API. Individual APIs sold on the marketplace belong to their own providers and are not listed here.
+
+## APIs
+
+- **API.market MCP Gateway** (https://api.market/mcp): Hosted remote MCP server (Streamable HTTP) that lets AI agents discover and call the APIs listed on API.market through five tools: search_apis, get_api_tools, call_api, check_usage and manage_subscription. Authenticates with OAuth 2.1 (authorization code + PKCE S256, dynamic client registration, scope mcp:use) or an x-api-market-key header.
+- **API.market Subscription Management API** (https://docs.api.market/subscription-management-api-documentation): REST API for reading a marketplace product and its pricing plans, reading the caller's current subscription, creating/upgrading/downgrading a subscription to a pricing plan (with a dry-run option) and cancelling a subscription. Authenticated with the x-api-market-key header.
+- **API.market Usage API** (https://docs.api.market/api.market-usage-api-documentation): Read-only REST API that returns quota, calls made and renewal dates for one subscription or for all of the caller's active subscriptions. Authenticated with the x-api-market-key header.

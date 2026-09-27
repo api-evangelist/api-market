@@ -1,0 +1,29 @@
+generated: '2026-09-25'
+method: searched
+name: API.market rate limits
+source: https://docs.api.market/api.market-usage-api-documentation
+limits:
+- name: Usage API - single subscription
+  limit_text: 30 requests / minute (burst up to 60)
+  max: 30
+  window: 1 minute
+  limit: 30
+  scope: per-key
+  endpoint: /user/usage/{storeSlug}/{apiProduct}/
+  api: API.market Usage API
+- name: Usage API - single subscription burst
+  limit_text: 30 requests / minute (burst up to 60)
+  max: 60
+  kind: burst
+  scope: per-key
+  endpoint: /user/usage/{storeSlug}/{apiProduct}/
+  api: API.market Usage API
+exhaustion:
+  status: 429
+  headers:
+  - Retry-After
+  body: '{"error":"rate_limited"}'
+note: Subscription Management API (https://docs.api.market/subscription-management-api-documentation) states limits
+  are based on the subscription plan, enforced per API key, and that exceeding them returns 429, with no number
+  published. Each marketplace product carries its own quotas in its pricing plans; those belong to the individual
+  sellers.

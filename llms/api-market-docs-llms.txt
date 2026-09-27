@@ -1,0 +1,101 @@
+# API.Market
+
+## API.Market
+
+- [Welcome to API.market](https://docs.api.market/welcome-to-api.market.md)
+- [Getting Started](https://docs.api.market/getting-started.md)
+- [What are API Products?](https://docs.api.market/what-are-api-products.md): API Products are core part of the api.market , follow this page to know more about it.
+- [How to subscribe to a  API Product?](https://docs.api.market/how-to-subscribe-to-a-api-product.md): API Product can be used by everyone after subscribing to any of the various plans available.
+- [Managing Subscriptions](https://docs.api.market/managing-subscriptions.md)
+- [Analytics & Logs](https://docs.api.market/analytics-and-logs.md)
+- [How can I cancel my Subscription?](https://docs.api.market/how-can-i-cancel-my-subscription.md)
+- [How do I add payment details?](https://docs.api.market/how-do-i-add-payment-details.md)
+- [How does API.market charges me?](https://docs.api.market/how-does-api.market-charges-me.md)
+- [How to use Wallet?](https://docs.api.market/how-to-use-wallet.md)
+- [How to Configure Auto-Pay?](https://docs.api.market/how-to-configure-auto-pay.md)
+- [Error Code](https://docs.api.market/error-code.md)
+- [API.Market MCP Server Guide](https://docs.api.market/api.market-mcp-server-guide.md): Transform every API into intelligent tools for AI agents through Model Context Protocol
+- [Subscription Management API Documentation](https://docs.api.market/subscription-management-api-documentation.md): APIs to upgrade, downgrade, cancel & Subscribe to various APIs on API.market.
+- [API.market Usage API Documentation](https://docs.api.market/api.market-usage-api-documentation.md)
+- [API Seller Console](https://docs.api.market/seller-docs/api-seller-console.md)
+- [Importing an API Source](https://docs.api.market/seller-docs/importing-an-api-source.md): Import an OpenAPI spec to create an API Source
+- [What is an API Product?](https://docs.api.market/seller-docs/what-is-an-api-product.md)
+- [What is a Pricing Plan](https://docs.api.market/seller-docs/what-is-a-pricing-plan.md)
+- [Submitting for Review](https://docs.api.market/seller-docs/submitting-for-review.md)
+- [Adding Payout Details](https://docs.api.market/seller-docs/adding-payout-details.md)
+- [Adding Store Details](https://docs.api.market/seller-docs/adding-store-details.md)
+- [Testing Your APIs & Products](https://docs.api.market/seller-docs/testing-your-apis-and-products.md)
+- [Analytics & Logs](https://docs.api.market/seller-docs/analytics-and-logs.md)
+- [Custom Usage](https://docs.api.market/seller-docs/custom-usage.md)
+- [Overriding Custom Usage on Result Retrieval](https://docs.api.market/seller-docs/overriding-custom-usage-on-result-retrieval.md): Update Usage on Result Retrieval: This guide explains how to override initial API usage by passing custom headers when users call for the result, ensuring precise usage tracking.
+- [What is the Referral Program?](https://docs.api.market/referral-program/what-is-the-referral-program.md)
+- [How Referrals Work & Tracking](https://docs.api.market/referral-program/how-referrals-work-and-tracking.md)
+- [Convert Postman Collection to OpenAPI Yaml](https://docs.api.market/fundamentals/convert-postman-collection-to-openapi-yaml.md): If you have never converted Postman Collection to OpenAPI Yaml before it can be a bit daunting task. Just follow the below simple steps to convert.
+- [Create OpenAPI spec using ChatGPT](https://docs.api.market/fundamentals/create-openapi-spec-using-chatgpt.md): If you have never worked with OpenAPI spec then creating one can look like a daunting task but it is actually very easy. You can auto-generate an OpenAPI YAML using ChatGPT. Just Follow this tutorial.
+- [About Us](https://docs.api.market/about-us.md)
+- [MagicAPI](https://docs.api.market/api-product-docs/magicapi.md)
+- [Screenshot API](https://docs.api.market/api-product-docs/magicapi/screenshot-api.md): A simple way to take a screenshot of a website by providing its URL.
+- [Domain Availability Checker API](https://docs.api.market/api-product-docs/magicapi/domain-availability-checker-api.md): Domain Availability Checker API is a powerful tool designed to check 500 domain extensions to see if domain name is taken or available.
+- [WhoIS API](https://docs.api.market/api-product-docs/magicapi/whois-api.md): A powerful tool designed to provide detailed WHOIS information for domains worldwide
+- [PDF Conversion API](https://docs.api.market/api-product-docs/magicapi/pdf-conversion-api.md): PDF Conversion API is a powerful tool designed to extract Text or HTML from URL or File.
+- [Image Upscale API](https://docs.api.market/api-product-docs/magicapi/image-upscale-api.md): Image Upscale API is a powerful tool designed to upscale the resolution and size of an image by 2x , 4x and 8x.
+- [DNS Checker API](https://docs.api.market/api-product-docs/magicapi/dns-checker-api.md): The DNS Checker API is a powerful tool designed to facilitate easy access to comprehensive DNS (Domain Name System) information for a given domain.
+- [Ageify API](https://docs.api.market/api-product-docs/magicapi/ageify-api.md): The Ageify API offers a unique and innovative solution for image manipulation, specifically tailored to altering the perceived age of faces within images
+- [Image Restoration API](https://docs.api.market/api-product-docs/magicapi/image-restoration-api.md): The Image Restoration API effortlessly restores and enhances images, revitalizing old or damaged photos with advanced algorithms.
+- [Toon Me API](https://docs.api.market/api-product-docs/magicapi/toon-me-api.md): The Toonme API is a powerful tool that transforms ordinary images into fun cartoon-style images with just a few clicks.
+- [Coding Assistant](https://docs.api.market/api-product-docs/magicapi/coding-assistant.md): The Coding Assistant API is a powerful tool designed to streamline coding workflows and enhance developer productivity.
+- [🎭 FaceSwap API: Instantaneous replaces face with one another](https://docs.api.market/api-product-docs/magicapi/faceswap-api-instantaneous-replaces-face-with-one-another.md): The Faceswap API is a testament to the power of artificial intelligence and deep learning.
+- [🏞️ Image Upload API](https://docs.api.market/api-product-docs/magicapi/image-upload-api.md): Free, Effortless Image Upload and Retrieval Service upto 7 Days.
+- [Deblurer API](https://docs.api.market/api-product-docs/magicapi/deblurer-api.md): The Deblurer API revolutionizes the way developers handle blurred images, offering a cutting-edge solution that restores clarity and detail with unparalleled precision.
+- [Hair Changer API](https://docs.api.market/api-product-docs/magicapi/hair-changer-api.md): The Hair Changer API offers developers a versatile tool to seamlessly integrate hair modification capabilities into their applications.
+- [🤳🏻🤖AI Qr Code Generator API](https://docs.api.market/api-product-docs/magicapi/ai-qr-code-generator-api.md): Generate customized, scalable QR codes: Integrate our API for efficient and reliable QR code implementation.
+- [Whisper API](https://docs.api.market/api-product-docs/magicapi/whisper-api.md): Whisper API, also known as Audio Scripter, is a powerful tool designed to streamline audio transcription and scripting processes.
+- [Image Colorizer API](https://docs.api.market/api-product-docs/magicapi/image-colorizer-api.md): This API colorizes old grayscale images by using Machine Learning models.
+- [OpenJourney API](https://docs.api.market/api-product-docs/magicapi/openjourney-api.md): The OpenJourney API offers a revolutionary approach to merging textual data with visually compelling imagery.
+- [Object Remover API](https://docs.api.market/api-product-docs/magicapi/object-remover-api.md): This API removes selected parts from the images.
+- [Image Captioner API](https://docs.api.market/api-product-docs/magicapi/image-captioner-api.md): Introducing our cutting-edge Image Captioner API, a powerful tool designed to provide accurate and contextually relevant descriptions for your images.
+- [Object Detector API](https://docs.api.market/api-product-docs/magicapi/object-detector-api.md): The Object Detector API is a powerful tool designed to identify objects within images based on specific keywords.
+- [NSFW API](https://docs.api.market/api-product-docs/magicapi/nsfw-api.md): The NSFW (Not Safe For Work)
+- [Crunchbase API](https://docs.api.market/api-product-docs/magicapi/crunchbase-api.md): crunchbase.com: Discover innovative companies and the people behind them
+- [Pipfeed's Extract API Developer Documentation](https://docs.api.market/api-product-docs/magicapi/pipfeeds-extract-api-developer-documentation.md): Extract data from online news & articles. Get full metadata with content, images, authors, summary, category, keywords, topics, and more.
+- [Migrating from Capix FaceSwap API to magicapi/faceswap-capix API](https://docs.api.market/api-product-docs/magicapi/migrating-from-capix-faceswap-api-to-magicapi-faceswap-capix-api.md): This guide provides focused instructions to help you migrate your applications from the old Capix FaceSwap API to the new magicapi/faceswap-capix API by API.market.
+- [BridgeML](https://docs.api.market/api-product-docs/bridgeml.md)
+- [Meta-Llama-3-8B-Instruct](https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-8b-instruct.md): Meta developed and released the Meta Llama 3 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8 and 70B sizes.
+- [Meta-Llama-3-70B-Instruct](https://docs.api.market/api-product-docs/bridgeml/meta-llama-3-70b-instruct.md): Meta developed and released the Meta Llama 3 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8 and 70B sizes.
+- [Mistral-7B-Instruct-v0.1](https://docs.api.market/api-product-docs/bridgeml/mistral-7b-instruct-v0.1.md): The Mistral-7B-Instruct-v0.1 Large Language Model (LLM) is a instruct fine-tuned version of the Mistral-7B-v0.1 generative text model using a variety of publicly available conversation datasets.
+- [Mixtral-8x22B-Instruct-v0.1](https://docs.api.market/api-product-docs/bridgeml/mixtral-8x22b-instruct-v0.1.md): The Mixtral-8x22B-Instruct-v0.1 Large Language Model (LLM) is an instruct fine-tuned version of the Mixtral-8x22B-v0.1.
+- [Meta-Llama-2-7b](https://docs.api.market/api-product-docs/bridgeml/meta-llama-2-7b.md): Meta-llama7b: A cutting-edge AI-driven virtual assistant designed to streamline tasks, enhance productivity, and adapt seamlessly to user needs.
+- [Meta-Llama-2-13b](https://docs.api.market/api-product-docs/bridgeml/meta-llama-2-13b.md): Meta-lama13b: Your AI-powered personal assistant, simplifying tasks and boosting productivity with cutting-edge technology.
+- [Meta-Llama-2-70b](https://docs.api.market/api-product-docs/bridgeml/meta-llama-2-70b.md): Meta-llama70b: Your versatile AI companion, revolutionizing productivity and simplifying daily tasks with intuitive assistance.
+- [Gemma-7b-it](https://docs.api.market/api-product-docs/bridgeml/gemma-7b-it.md): Gemma-7B-IT: Your all-in-one AI solution for streamlined workflows and data-driven decisions.
+- [NeuralHermes-2.5-Mistral-7B](https://docs.api.market/api-product-docs/bridgeml/neuralhermes-2.5-mistral-7b.md): NeuralHermes-2.5-Mistral-7B: Unleash unparalleled AI capabilities with Mistral's 7B parameters for advanced natural language processing.
+- [BAAI/bge-large-en-v1.5](https://docs.api.market/api-product-docs/bridgeml/baai-bge-large-en-v1.5.md): BAAI/bge-large-en-v1.5 is a highly advanced language model designed by BAAI, equipped with powerful natural language processing capabilities for diverse application
+- [CodeLlama-70b-Instruct-hf](https://docs.api.market/api-product-docs/bridgeml/codellama-70b-instruct-hf.md): CodeLlama-70b-Instruct-hf: A cutting-edge instructional tool leveraging high-fidelity simulations to enhance coding proficiency and comprehension.
+- [🤖🧗Text-to-Image API](https://docs.api.market/api-product-docs/bridgeml/text-to-image-api.md): Fast text-to-image generation model capable of producing high-quality images
+- [📝🎧 Text to Audio API](https://docs.api.market/api-product-docs/bridgeml/text-to-audio-api.md): Text to Audio API is a powerful transformer-based model that turns text into audio.
+- [Capix AI](https://docs.api.market/api-product-docs/capix-ai.md)
+- [FaceSwap Image and Video Face Swap API](https://docs.api.market/api-product-docs/capix-ai/faceswap-image-and-video-face-swap-api.md): Experience seamless digital transformations with our Image and Video Face Swap API.
+- [MakeUp](https://docs.api.market/api-product-docs/capix-ai/makeup.md): This API is perfect for enhancing portraits, making them look beautiful and natural with just a few clicks.
+- [Photolab.me](https://docs.api.market/api-product-docs/capix-ai/photolab.me.md)
+- [AI Picture Colorizer](https://docs.api.market/api-product-docs/capix-ai/ai-picture-colorizer.md): Colorizes old grayscale images based on AI
+- [AI Picture Upscaler](https://docs.api.market/api-product-docs/capix-ai/ai-picture-upscaler.md): Upscales and enhances images by AI
+- [AI Background Remover](https://docs.api.market/api-product-docs/capix-ai/ai-background-remover.md): Background Remover API from Images
+- [Object Remover](https://docs.api.market/api-product-docs/capix-ai/object-remover.md): Inpaints selected parts of the images
+- [TTS Universal](https://docs.api.market/api-product-docs/capix-ai/tts-universal.md): Text To Speech API, more than 700+ AI voices
+- [Home GPT](https://docs.api.market/api-product-docs/capix-ai/home-gpt.md): Regenerates old rooms and houses to modern one
+- [AI & Plagiarism Checker](https://docs.api.market/api-product-docs/capix-ai/ai-and-plagiarism-checker.md): An AI API service to detect AI content
+- [AI Story Generator](https://docs.api.market/api-product-docs/capix-ai/ai-story-generator.md): Generate story based on mode, topic and genre
+- [AI Essay Generator](https://docs.api.market/api-product-docs/capix-ai/ai-essay-generator.md): Generate esay based on mode, topic and word limit
+- [Book Title Generator](https://docs.api.market/api-product-docs/capix-ai/book-title-generator.md): Generates book titles using prompts
+- [Trueway](https://docs.api.market/api-product-docs/trueway.md)
+- [⛕ 🗺️ Trueway Routing API](https://docs.api.market/api-product-docs/trueway/trueway-routing-api.md): Finding the optimal route between two or more locations.
+- [🌐📍Trueway Geocoding API: Forward and Reverse Geocoding](https://docs.api.market/api-product-docs/trueway/trueway-geocoding-api-forward-and-reverse-geocoding.md): Affordable API to Convert coordinates into addresses and addresses into coordinates.
+- [🛤️ ⏱️Trueway Matrix API: Travel Distance and Time](https://docs.api.market/api-product-docs/trueway/trueway-matrix-api-travel-distance-and-time.md): Calculate distances and durations between a set of origins and destinations.
+- [🏛️ Trueway Places API](https://docs.api.market/api-product-docs/trueway/trueway-places-api.md): Get Detailed information for over 180+ million places and points of interest (POI's): categories, names, addresses, phone numbers, geo-coordinates, etc.
+- [AILabTools](https://docs.api.market/api-product-docs/ailabtools.md)
+- [Cartoon-Yourself](https://docs.api.market/api-product-docs/ailabtools/cartoon-yourself.md): Convert photos into various cartoon styles with our Cartoon Yourself API, featuring advanced 3D game effects and high-quality sketch transformations.
+- [SharpAPI](https://docs.api.market/api-product-docs/sharpapi.md)
+- [📄 AI-Powered Resume/CV Parsing API](https://docs.api.market/api-product-docs/sharpapi/ai-powered-resume-cv-parsing-api.md): Advanced AI-powered Resume/CV parsing using AI
+- [🛩️ Airports Database & Flight Duration API](https://docs.api.market/api-product-docs/sharpapi/airports-database-and-flight-duration-api.md): 🛩️ Comprehensive Airport Data and Accurate Flight Duration Calculations for 30,000 airports + flights
+- [Text to Speech](https://docs.api.market/api-product-docs/text-to-speech.md)
+- [Turn your text into Magical-sounding Audio](https://docs.api.market/api-product-docs/text-to-speech/turn-your-text-into-magical-sounding-audio.md): Designed to provide you with the most realistic human-sounding voices at an affordable price

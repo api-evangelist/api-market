@@ -1,0 +1,9 @@
+generated: '2026-09-25'
+method: probed
+source: https://api.market/.well-known/oauth-authorization-server
+scopes:
+- name: mcp:use
+  description: Use the API.market MCP gateway (the only scope the protected-resource document for https://api.market/api/mcp/gateway
+    lists).
+- name: offline_access
+  description: Issue a refresh token (grant_types_supported includes refresh_token).

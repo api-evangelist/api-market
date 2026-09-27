@@ -1,0 +1,8 @@
+generated: '2026-09-25'
+method: none
+source:
+- https://api.market/privacy_policy
+signals: {}
+note: Conventional paths (/accessibility, /legal/subprocessors, /legal/dpa, /privacy/requests, /transparency, /security/sbom)
+  all 404. The privacy policy (Last Updated as of March 24, 2025) describes CCPA/CPRA rights and an under-18 restriction
+  in prose but publishes no request mechanism, subprocessor table or residency statement.

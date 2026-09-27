@@ -3,14 +3,16 @@ method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
 summary:
-  hosts: 8
+  hosts: 11
   own: 7
   other_domain: 0
-  platform: 1
+  platform: 4
   roles:
   - api
   - docs
+  - other
   - source
+  - status
   - website
 hosts:
 - host: api.api.market
@@ -24,19 +26,24 @@ hosts:
 - host: api.market
   found_by:
   - pointer
+  - apis[]
   - probed
   - contract-discovery
   - well-known
   - vendor-detect
   types:
-  - TermsOfService
-  - Security
-  - PrivacyPolicy
   - Website
   - Blog
   - Support
-  - SignUp
+  - HelpCenter
+  - Login
+  - About
+  - Enterprise
+  - TermsOfService
+  - PrivacyPolicy
   serves:
+  - api
+  - docs
   - cdn
   - hosting
   vendor: cloudflare
@@ -75,7 +82,6 @@ hosts:
   - vendor-detect
   types:
   - Documentation
-  - APIReference
   - GettingStarted
   serves:
   - docs
@@ -89,6 +95,7 @@ hosts:
   - pointer
   types:
   - GitHubOrganization
+  - GitHubRepository
   serves: []
   registrable_domain: github.com
   role: source
@@ -107,11 +114,40 @@ hosts:
   relation: own
 - host: status.api.market
   found_by:
+  - pointer
   - probed
   - site-links
   - well-known
-  types: []
+  types:
+  - StatusPage
   serves: []
   registrable_domain: api.market
-  role: api
+  role: status
   relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.youtube.com
+  found_by:
+  - pointer
+  types:
+  - YouTube
+  serves: []
+  registrable_domain: youtube.com
+  role: other
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - X
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

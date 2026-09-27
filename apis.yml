@@ -1,379 +1,175 @@
-aid: api-market
-
 name: API.market
-
-image: https://api.market/images/seo-cover.png
-
-description: API.market is a marketplace platform that aggregates and sells access to a wide variety of APIs and AI models. It offers developers
-  a single MCP (Multi-Channel Platform) connection to discover, subscribe, and integrate over 590 APIs across categories like image editing, video
-  generation, mapping, and data intelligence. The platform provides tools for subscription management, usage analytics, and payment handling,
-  aiming to simplify API consumption for both sellers and buyers. API.market also features a seller console for API providers to list their products,
-  set pricing plans, and manage deployments, fostering a vibrant ecosystem of API services.
-
+aid: api-market
+description: API.market (Noveum) is an API marketplace launched in April 2024 where developers discover, subscribe
+  to and call third-party APIs and AI models with one account, one x-api-market-key and unified billing, and where
+  sellers import an OpenAPI source, set pricing plans and get paid. The platform itself exposes a hosted MCP gateway
+  at https://api.market/api/mcp/gateway (Streamable HTTP, OAuth 2.1 with dynamic client registration, or API key)
+  with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), per-product MCP endpoints
+  at https://prod.api.market/api/mcp/{workspace}/{api-slug}, a Subscription Management REST API and a read-only
+  Usage API. Individual APIs sold on the marketplace belong to their own providers and are not listed here.
 url: https://raw.githubusercontent.com/api-evangelist/api-market/refs/heads/main/apis.yml
-
 x-type: company
-
-x-source: harvest:new-submission
-
+x-source: apis-io-submission
+x-submitted-by: Shashank (founder), shashank@noveum.ai, email to kin@apievangelist.com 2026-09-25
+x-attribution-note: 'Profile the MARKETPLACE ITSELF: its platform, MCP gateway, docs and portal. Do NOT list or
+  register the individual third-party APIs sold through API.market as API.market APIs; they belong to their providers
+  (Kin, 2026-09-25: marketplaces yes, their individual APIs no; confirmed by the founder the same day).'
 x-tier: profiled
-x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
-
-specificationVersion: '0.20'
-
+x-tier-reason: enrichment pass 2026-09-25 (local-v5; was email submission worked by the support sweep 2026-09-25;
+  root 200, invented path 404, llms.txt 200, /mcp 200, docs.api.market 200)
+specificationVersion: '0.23'
 created: '2026-09-25'
-
-modified: '2026-09-25'
-
-x-docs-platform: gitbook
-x-docs-platform-confidence: high
-x-docs-platform-checked: 2026-09-25
+modified: '2026-09-27'
 tags:
-- Company
-- Marketplace
-- Artificial Intelligence
-- Integration
+- API Marketplace
 - MCP
-tags_raw:
-- Company
-- Marketplace
-- API
-- AI
-- Integration
-- MCP
-
+- Model Context Protocol
+- AI Agents
+- API Monetization
+- Subscriptions
+- Usage Metering
+- OAuth
+image: https://api.market/favicon.ico
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
-
 common:
-- type: AgentSkill
-  url: skills/_index.yml
-- type: Overlay
-  url: overlays/api-market-overlay.yaml
-- type: Spectral
-  url: rules/api-market-rules.yml
-- type: JSONLD
-  url: json-ld/api-market-context.jsonld
-- type: Vocabulary
-  url: vocabulary/api-market-vocabulary.yml
-- type: DataModel
-  url: data-model/api-market-data-model.yml
+- type: RateLimits
+  url: rate-limits/api-market-rate-limits.yml
+- type: Plans
+  url: plans/api-market-plans-pricing.yml
+- type: ChangeLog
+  url: changelog/api-market-changelog.yml
+- type: Conventions
+  url: conventions/api-market-conventions.yml
+- type: Authentication
+  url: authentication/api-market-authentication.yml
+- type: OAuthScopes
+  url: scopes/api-market-scopes.yml
+- type: StatusPage
+  url: https://status.api.market/status/dash
+- type: Lifecycle
+  url: lifecycle/api-market-lifecycle.yml
 - type: ErrorCatalog
-  url: errors/api-market-problem-types.yml
+  url: errors/api-market-error-codes.yml
 - type: Conformance
   url: conformance/api-market-conformance.yml
 - type: LLMsTxt
   url: llms/api-market-llms.txt
+- type: MCPServer
+  url: mcp/api-market-mcp.yml
 - type: WellKnown
   url: well-known/api-market-well-known.yml
 - type: Hosts
   url: hosts/api-market-hosts.yml
 - type: Vendors
   url: vendors/api-market-vendors.yml
-- type: TermsOfService
-  url: https://api.market/terms_of_service
-- type: Security
-  url: https://api.market/category/security
-- type: PrivacyPolicy
-  url: https://api.market/privacy_policy
-- type: GitHubOrganization
-  url: https://github.com/Noveum
+- type: SDKs
+  url: packages/api-market-packages.yml
+- type: Packages
+  url: packages/api-market-packages.yml
 - type: DomainSecurity
   url: security/api-market-domain-security.yml
 - type: Website
   url: https://api.market/
 - type: Documentation
   url: https://docs.api.market/
-- type: APIReference
-  url: https://docs.api.market/api.market-usage-api-documentation
 - type: GettingStarted
   url: https://docs.api.market/getting-started
+- type: GitHubOrganization
+  url: https://github.com/Noveum
+- type: GitHubRepository
+  url: https://github.com/Noveum/api-market-agent-integrations
 - type: Blog
   url: https://api.market/blog
 - type: Support
   url: https://api.market/contact
-- type: SignUp
+- type: HelpCenter
+  url: https://api.market/faq
+- type: Login
   url: https://api.market/auth/login
-
+- type: About
+  url: https://api.market/about
+- type: Enterprise
+  url: https://api.market/enterprise
+- type: TermsOfService
+  url: https://api.market/terms_of_service
+- type: PrivacyPolicy
+  url: https://api.market/privacy_policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/api.market
+- type: X
+  url: https://x.com/apimarket_
+- type: YouTube
+  url: https://www.youtube.com/@api.market
+- type: LLMsTxt
+  url: llms/api-market-docs-llms.txt
+- type: GettingStarted
+  url: https://api.market/mcp
 apis:
-- aid: api-market:api-market-api-market-api-api
-  name: API.market API.market API
-  description: The API.market API API from API.market — 2 operation(s) for api.market api.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
+- aid: api-market:api-market-mcp-gateway
+  name: API.market MCP Gateway
+  description: 'Hosted remote MCP server (Streamable HTTP) that lets AI agents discover and call the APIs listed
+    on API.market through five tools: search_apis, get_api_tools, call_api, check_usage and manage_subscription.
+    Authenticates with OAuth 2.1 (authorization code + PKCE S256, dynamic client registration, scope mcp:use) or
+    an x-api-market-key header.'
+  humanURL: https://api.market/mcp
+  baseURL: https://api.market/api/mcp/gateway
+  tags:
+  - MCP
+  - AI Agents
+  - OAuth
+  - API Marketplace
+  properties:
+  - type: Documentation
+    url: https://docs.api.market/api.market-mcp-server-guide
+  - type: GitHubRepository
+    url: https://github.com/Noveum/api-market-agent-integrations
+  - type: MCPServer
+    url: mcp/api-market-mcp.yml
+- aid: api-market:api-market-subscription-management-api
+  name: API.market Subscription Management API
+  description: REST API for reading a marketplace product and its pricing plans, reading the caller's current subscription,
+    creating/upgrading/downgrading a subscription to a pricing plan (with a dry-run option) and cancelling a subscription.
+    Authenticated with the x-api-market-key header.
+  humanURL: https://docs.api.market/subscription-management-api-documentation
+  baseURL: https://api.market
+  tags:
+  - Subscriptions
+  - Billing
+  - API Marketplace
+  properties:
+  - type: Documentation
+    url: https://docs.api.market/subscription-management-api-documentation
+- aid: api-market:api-market-usage-api
+  name: API.market Usage API
+  description: Read-only REST API that returns quota, calls made and renewal dates for one subscription or for all
+    of the caller's active subscriptions. Authenticated with the x-api-market-key header.
+  humanURL: https://docs.api.market/api.market-usage-api-documentation
   baseURL: https://prod.api.market
   tags:
-  - API.market API
+  - Usage Metering
+  - Analytics
+  - API Marketplace
   properties:
-  - type: OpenAPI
-    url: openapi/api-market-api-market-api-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-bridgeml-api
-  name: API.market Bridgeml API
-  description: The Bridgeml API from API.market — 2 operation(s) for bridgeml.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Bridgeml
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-bridgeml-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-images-api
-  name: API.market Images API
-  description: The Images API from API.market — 2 operation(s) for images.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Images
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-images-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-magicapi-api
-  name: API.market Magicapi API
-  description: The Magicapi API from API.market — 33 operation(s) for magicapi.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Magicapi
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-magicapi-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-mcp-api
-  name: API.market MCP API
-  description: The Mcp API from API.market — 1 operation(s) for mcp.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Mcp
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-mcp-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-models-api
-  name: API.market Models API
-  description: The Models API from API.market — 1 operation(s) for models.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Models
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-models-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-pipfeed-api
-  name: API.market Pipfeed API
-  description: The Pipfeed API from API.market — 3 operation(s) for pipfeed.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Pipfeed
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-pipfeed-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-predictions-api
-  name: API.market Predictions API
-  description: The Predictions API from API.market — 1 operation(s) for predictions.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Predictions
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-predictions-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-status-api
-  name: API.market Status API
-  description: The Status API from API.market — 1 operation(s) for status.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Status
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-status-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-subscription-api
-  name: API.market Subscription API
-  description: The Subscription API from API.market — 2 operation(s) for subscription.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Subscription
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-subscription-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-toonme-api-api
-  name: API.market Toonme API
-  description: The Toonme Api API from API.market — 4 operation(s) for toonme api.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - Toonme Api
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-toonme-api-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
-- aid: api-market:api-market-user-api
-  name: API.market User API
-  description: The User API from API.market — 3 operation(s) for user.
-  humanURL: https://docs.api.market/api.market-mcp-server-guide
-  baseURL: https://prod.api.market
-  tags:
-  - User
-  properties:
-  - type: OpenAPI
-    url: openapi/api-market-user-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/api-market-post-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-pipfeed-parse-extract-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-aiqrcode-predictions-request-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-get-api-v1-magicapi-whisper-whisper-response-schema.json
-  - type: JSONSchema
-    url: json-schema/api-market-post-api-v1-magicapi-whisper-whisper-request-schema.json
+  - type: Documentation
+    url: https://docs.api.market/api.market-usage-api-documentation
 x-coverage:
-  state: unreadable
-  reason: no-developer-program
-  method: derived
-  generated: '2026-09-25'
-  generator: derive-coverage.py (pre-flight evidence)
-  detail: >-
-    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  state: covered
+  reason: covered
+  detail: Documented platform surfaces (hosted OAuth MCP gateway, GitBook docs MCP server, Subscription Management
+    and Usage REST APIs) were profiled from the provider docs and live probes; no machine-readable REST contract
+    is published.
+  evidence:
+  - url: https://api.market/.well-known/oauth-protected-resource/api/mcp/gateway
+    status: 200
+  - url: https://docs.api.market/~gitbook/mcp
+    status: 200
+  - url: https://docs.api.market/openapi.json
+    status: 404
+  checked: '2026-09-25'
 x-enrichment:
   date: '2026-09-25'
   status: enriched
-  artifacts_added: 27
-  pass: modular-v1
-  engine: identity=local,contract=local,surfaces=local,docs=local
+  artifacts_added: 20
+  pass: local-v5

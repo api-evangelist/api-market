@@ -1,0 +1,19 @@
+generated: '2026-09-25'
+method: searched
+source:
+- https://registry.npmjs.org/@noveum-ai%2fmcp-server
+- https://github.com/Noveum/api-market-mcp-server
+packages:
+- name: '@noveum-ai/mcp-server'
+  registry: npm
+  url: https://www.npmjs.com/package/@noveum-ai/mcp-server
+  language: javascript
+  official: true
+  version: 1.0.4
+  published: '2025-03-30'
+  kind: mcp-server
+  repository: https://github.com/Noveum/api-market-mcp-server
+  note: First-party stdio MCP server ("API Market MCP Servers") published by Noveum, the company behind API.market;
+    last release predates the hosted gateway (server.json version 3.0.0).
+note: No first-party REST client SDK is published; the platform points buyers at per-product code examples and MCP
+  configs.
