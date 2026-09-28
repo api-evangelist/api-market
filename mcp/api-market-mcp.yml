@@ -18,7 +18,8 @@ server:
 deployment:
   mode: hosted
   endpoint: https://api.market/api/mcp/gateway
-  connect: claude mcp add --transport http api-market https://api.market/api/mcp/gateway (then OAuth via https://api.market/mcp)
+  connect: claude mcp add --transport http api-market https://api.market/api/mcp/gateway
+  connect_note: After adding, the client completes an OAuth sign-in via https://api.market/mcp; see the guide.
   guide: https://github.com/Noveum/api-market-agent-integrations/blob/main/docs/mcp-gateway.md
   auth: oauth
   verified: probed
