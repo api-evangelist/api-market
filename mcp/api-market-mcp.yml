@@ -16,17 +16,16 @@ server:
   url: https://api.market/api/mcp/gateway
   websiteUrl: https://api.market/mcp
 deployment:
-  mode: both
+  mode: hosted
   endpoint: https://api.market/api/mcp/gateway
-  install: npx -y @noveum-ai/mcp-server --headers x-magicapi-key:your-api-key
-  package: https://www.npmjs.com/package/@noveum-ai/mcp-server
+  connect: claude mcp add --transport http api-market https://api.market/api/mcp/gateway (then OAuth via https://api.market/mcp)
+  guide: https://github.com/Noveum/api-market-agent-integrations/blob/main/docs/mcp-gateway.md
   auth: oauth
   verified: probed
   note: POST tools/list to the gateway anonymously returned 401 with WWW-Authenticate Bearer resource_metadata,
     and the RFC 9728 document at /.well-known/oauth-protected-resource/api/mcp/gateway returned 200 (scopes_supported
-    mcp:use). The provider documents API-key auth (x-api-market-key) as the alternative. The stdio package @noveum-ai/mcp-server
-    (Noveum/api-market-mcp-server, MIT, npm 1.0.4 of 2025-03-30) is the older per-API local server and predates
-    the hosted gateway.
+    mcp:use). The provider documents API-key auth (x-api-market-key) as the alternative. The gateway is hosted
+    only (founder, 2026-09-27).
 auth:
   type: oauth2
   flow: authorization_code
@@ -50,13 +49,6 @@ tools:
 tools_note: Tool names and descriptions are verbatim from the provider README; live inputSchemas are OAuth-gated
   (anonymous tools/list returned 401). The README reports the hosted server as version 3.0.0 with five tools, two
   resources and two prompts.
-per_product_servers:
-  pattern: https://prod.api.market/api/mcp/{workspace}/{api-slug}
-  auth_header: x-api-market-key
-  docs: https://docs.api.market/api.market-mcp-server-guide
-  note: Every marketplace product is also served as its own MCP server with tools generated from its OpenAPI operations
-    (e.g. POST /images/generate -> post_images_generate). Those tools belong to the individual sellers and are not
-    enumerated here.
 docs_server:
   name: API.Market MCP Server (documentation)
   endpoint: https://docs.api.market/~gitbook/mcp
@@ -130,3 +122,5 @@ docs_server:
       - pageUrl
       additionalProperties: false
       $schema: http://json-schema.org/draft-07/schema#
+legacy_note: A separate, older stdio implementation (npm @noveum-ai/mcp-server, Noveum/api-market-mcp-server) predates
+  the hosted gateway and is NOT this gateway's install path; recorded here only so it is not mistaken for it.

@@ -4,8 +4,7 @@ description: API.market (Noveum) is an API marketplace launched in April 2024 wh
   to and call third-party APIs and AI models with one account, one x-api-market-key and unified billing, and where
   sellers import an OpenAPI source, set pricing plans and get paid. The platform itself exposes a hosted MCP gateway
   at https://api.market/api/mcp/gateway (Streamable HTTP, OAuth 2.1 with dynamic client registration, or API key)
-  with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), per-product MCP endpoints
-  at https://prod.api.market/api/mcp/{workspace}/{api-slug}, a Subscription Management REST API and a read-only
+  with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), a Subscription Management REST API and a read-only
   Usage API. Individual APIs sold on the marketplace belong to their own providers and are not listed here.
 url: https://raw.githubusercontent.com/api-evangelist/api-market/refs/heads/main/apis.yml
 x-type: company
