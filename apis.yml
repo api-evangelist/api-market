@@ -44,6 +44,8 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: Pricing
+  url: https://api.market/seller
 - type: RateLimits
   url: rate-limits/api-market-rate-limits.yml
 - type: Plans
