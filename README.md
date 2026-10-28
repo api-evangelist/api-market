@@ -64,10 +64,144 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API.market (Noveum) is an API marketplace launched in April 2024 where developers discover, subscribe to and call third-party APIs and AI models with one account, one x-api-market-key and unified billing, and where sellers import an OpenAPI source, set pricing plans and get paid. The platform itself exposes a hosted MCP gateway at https://api.market/api/mcp/gateway (Streamable HTTP, OAuth 2.1 with dynamic client registration, or API key) with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), per-product MCP endpoints at https://prod.api.market/api/mcp/{workspace}/{api-slug}, a Subscription Management REST API and a read-only Usage API. Individual APIs sold on the marketplace belong to their own providers and are not listed here.
+API.market (Noveum) is an API marketplace launched in April 2024 where developers discover, subscribe to and call third-party APIs and AI models with one account, one x-api-market-key and unified billing, and where sellers import an OpenAPI source, set pricing plans and get paid. The platform itself exposes a hosted MCP gateway at https://api.market/api/mcp/gateway (Streamable HTTP, OAuth 2.1 with dynamic client registration, or API key) with five tools (search_apis, get_api_tools, call_api, check_usage, manage_subscription), a Subscription Management REST API and a read-only Usage API. Individual APIs sold on the marketplace belong to their own providers and are not listed here.
 
-## APIs
+**Areas:** API Marketplace · MCP · AI Agents · API Monetization · Subscription · Usage Metering · Authentication
 
-- **API.market MCP Gateway** (https://api.market/mcp): Hosted remote MCP server (Streamable HTTP) that lets AI agents discover and call the APIs listed on API.market through five tools: search_apis, get_api_tools, call_api, check_usage and manage_subscription. Authenticates with OAuth 2.1 (authorization code + PKCE S256, dynamic client registration, scope mcp:use) or an x-api-market-key header.
-- **API.market Subscription Management API** (https://docs.api.market/subscription-management-api-documentation): REST API for reading a marketplace product and its pricing plans, reading the caller's current subscription, creating/upgrading/downgrading a subscription to a pricing plan (with a dry-run option) and cancelling a subscription. Authenticated with the x-api-market-key header.
-- **API.market Usage API** (https://docs.api.market/api.market-usage-api-documentation): Read-only REST API that returns quota, calls made and renewal dates for one subscription or for all of the caller's active subscriptions. Authenticated with the x-api-market-key header.
+## API.market on APIs.io
+
+Everything profiled for API.market is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/api-market/](https://apis.io/providers/api-market/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [API.market MCP Gateway](https://apis.io/apis/api-market/api-market-mcp-gateway/) — Hosted remote MCP server (Streamable HTTP) that lets AI agents discover and call the APIs listed on API.market through five tools: search_apis,…
+- [API.market Subscription Management API](https://apis.io/apis/api-market/api-market-subscription-management-api/) — REST API for reading a marketplace product and its pricing plans, reading the caller's current subscription, creating/upgrading/downgrading a subscription…
+- [API.market Usage API](https://apis.io/apis/api-market/api-market-usage-api/) — Read-only REST API that returns quota, calls made and renewal dates for one subscription or for all of the caller's active subscriptions. Authenticated with…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [API.market MCP Gateway](https://apis.io/servers/api-market/io-github-noveum-api-market-gateway/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-get-api-v1-magicapi-whisper-whisper-response/)
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-get-api-v1-pipfeed-parse-extract-response/)
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-post-api-v1-magicapi-aiqrcode-predictions-request/)
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-post-api-v1-magicapi-upscaler-upscale2-xresponse/)
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-post-api-v1-magicapi-whisper-whisper-request/)
+- [Moved to /providers/api-market/](https://apis.io/schemas/api-market/api-market-post-pipfeed-parse-extract-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Moved to /providers/api-market/](https://apis.io/jsonld/api-market/api-market-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Moved to /providers/api-market/](https://apis.io/rules/api-market/api-market-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Api Market Authentication](https://apis.io/security/api-market/api-market-authentication/)
+- [Api Market Domain Security](https://apis.io/security/api-market/api-market-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Api Market Scopes](https://apis.io/scopes/api-market/api-market-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Api Market Plans Pricing](https://apis.io/plans/api-market/api-market-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Api Market Rate Limits](https://apis.io/rate-limits/api-market/api-market-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://api.market/)
+- [Documentation](https://docs.api.market/)
+- [Getting started](https://docs.api.market/getting-started)
+- [Pricing](https://api.market/seller)
+- [Support](https://api.market/contact)
+- [Blog](https://api.market/blog)
+- [Terms of service](https://api.market/terms_of_service)
+- [Privacy policy](https://api.market/privacy_policy)
+- [GitHub](https://github.com/Noveum)
+- [Status](https://status.api.market/status/dash)
+
+## API Evangelist rating
+
+**Kin Score 44.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.0 |
+| Contract quality | 9.1 |
+| Contract governance | 18.2 |
+| Operational transparency | 57.9 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 65.8 |
+
+**Agent readiness 29.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/api-market/](https://apis.io/providers/api-market/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for API.market: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/api-market/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
